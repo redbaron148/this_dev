@@ -1,5 +1,0 @@
-bool clear
-int16 speed
-int16 radius
----
-bool success

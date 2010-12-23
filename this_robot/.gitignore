@@ -1,0 +1,6 @@
+bin/
+build/
+*gen/
+msg/lisp/
+srv/lisp/
+

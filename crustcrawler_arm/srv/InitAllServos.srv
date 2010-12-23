@@ -1,0 +1,10 @@
+# service to begin initalizing all servos.
+
+uint8 range_0
+uint8 range_1
+uint8 range_2
+uint8 range_3
+uint8 range_4
+uint8 range_5
+---
+bool  success

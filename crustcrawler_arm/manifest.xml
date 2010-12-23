@@ -1,0 +1,17 @@
+<package>
+  <description brief="crustcrawler_arm">
+
+     crustcrawler_arm
+
+  </description>
+  <author>Aaron Parker</author>
+  <license>BSD</license>
+  <review status="unreviewed" notes=""/>
+  <url>http://ros.org/wiki/crustcrawler_arm</url>
+  <depend package="roscpp"/>
+  <depend package="rospy"/>
+  <depend package="std_msgs"/>
+
+</package>
+
+

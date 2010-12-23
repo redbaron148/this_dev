@@ -1,0 +1,5 @@
+# end the initalization by canceling or by saying ok
+
+string  message
+---
+bool    success

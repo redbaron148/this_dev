@@ -1,0 +1,8 @@
+# ik position for crustcrawler
+
+int8  x
+int8  y
+int8  z
+int8  attack_angle
+---
+bool success

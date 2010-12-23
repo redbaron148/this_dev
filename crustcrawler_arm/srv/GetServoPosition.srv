@@ -1,0 +1,6 @@
+# used to query the arm about servo positions
+
+uint8 servo_index
+#bool  value_is_pwm
+---
+float32 value

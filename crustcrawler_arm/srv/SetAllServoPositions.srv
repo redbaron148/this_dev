@@ -1,0 +1,11 @@
+# used to set all the positions in the servo
+
+#bool  values_are_pwm
+int32 value_0
+int32 value_1
+int32 value_2
+int32 value_3
+int32 value_4
+int32 value_5
+---
+bool  success

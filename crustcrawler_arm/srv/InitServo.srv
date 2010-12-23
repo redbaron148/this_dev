@@ -1,0 +1,6 @@
+# service to initialize servo
+
+uint8 servo_index
+uint8 desired_range # 0-180 (degrees)
+---
+bool  success

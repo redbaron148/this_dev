@@ -1,0 +1,6 @@
+bin/
+build/
+*gen/
+srv/lisp/
+src/crustcrawler_arm/
+

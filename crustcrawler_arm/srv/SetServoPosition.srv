@@ -1,0 +1,7 @@
+# used to set one servo to one position
+
+int8  servo_index
+#bool  value_is_pwm
+int32 value
+---
+bool  success

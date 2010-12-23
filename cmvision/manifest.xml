@@ -1,0 +1,28 @@
+<package>
+  <description brief="cmvision">
+
+    Node for the Color Machine Vision Project, used for fast color blob detection
+  </description>
+  <author>Nate Koenig</author>
+  <license>LGPL</license>
+  <review status="unreviewed" notes=""/>
+  <url>http://pr.willowgarage.com/wiki/cmvision</url>
+  <depend package="roscpp"/>
+  <depend package="sensor_msgs"/>
+  <depend package="opencv2"/>
+  <depend package="cv_bridge"/>
+  <rosdep name="wxwidgets"/>
+  <!--<depend package="color_calib"/>-->
+
+  <export>
+    <cpp lflags="`rosboost-cfg --lflags thread`
+      -Wl,-rpath,${prefix}/cmvision/lib -L${prefix}/cmvision/lib" 
+      cflags="`rosboost-cfg --cflags` -I${prefix}/msg/cpp"/>
+  </export>
+
+
+
+  <platform os="ubuntu" version="9.04"/>
+  <platform os="ubuntu" version="9.10"/>
+  <platform os="ubuntu" version="10.04"/>
+</package>

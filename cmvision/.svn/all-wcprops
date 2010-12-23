@@ -1,0 +1,41 @@
+K 25
+svn:wc:ra_dav:version-url
+V 69
+/svn/wg-ros-pkg/!svn/ver/46385/branches/trunk_cturtle/vision/cmvision
+END
+colors.txt
+K 25
+svn:wc:ra_dav:version-url
+V 80
+/svn/wg-ros-pkg/!svn/ver/42502/branches/trunk_cturtle/vision/cmvision/colors.txt
+END
+cmvision.launch
+K 25
+svn:wc:ra_dav:version-url
+V 85
+/svn/wg-ros-pkg/!svn/ver/42502/branches/trunk_cturtle/vision/cmvision/cmvision.launch
+END
+manifest.xml
+K 25
+svn:wc:ra_dav:version-url
+V 82
+/svn/wg-ros-pkg/!svn/ver/42502/branches/trunk_cturtle/vision/cmvision/manifest.xml
+END
+mainpage.dox
+K 25
+svn:wc:ra_dav:version-url
+V 82
+/svn/wg-ros-pkg/!svn/ver/42502/branches/trunk_cturtle/vision/cmvision/mainpage.dox
+END
+CMakeLists.txt
+K 25
+svn:wc:ra_dav:version-url
+V 84
+/svn/wg-ros-pkg/!svn/ver/42502/branches/trunk_cturtle/vision/cmvision/CMakeLists.txt
+END
+Makefile
+K 25
+svn:wc:ra_dav:version-url
+V 78
+/svn/wg-ros-pkg/!svn/ver/42502/branches/trunk_cturtle/vision/cmvision/Makefile
+END

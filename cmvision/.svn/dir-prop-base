@@ -1,0 +1,11 @@
+K 10
+svn:ignore
+V 48
+build
+.build_version
+lib
+.project
+.cproject
+bin
+
+END

@@ -1,0 +1,65 @@
+K 25
+svn:wc:ra_dav:version-url
+V 73
+/svn/wg-ros-pkg/!svn/ver/46385/branches/trunk_cturtle/vision/cmvision/src
+END
+cmvision_color_blob_finder.h
+K 25
+svn:wc:ra_dav:version-url
+V 102
+/svn/wg-ros-pkg/!svn/ver/42502/branches/trunk_cturtle/vision/cmvision/src/cmvision_color_blob_finder.h
+END
+color_gui.cpp
+K 25
+svn:wc:ra_dav:version-url
+V 87
+/svn/wg-ros-pkg/!svn/ver/42502/branches/trunk_cturtle/vision/cmvision/src/color_gui.cpp
+END
+main.cpp
+K 25
+svn:wc:ra_dav:version-url
+V 82
+/svn/wg-ros-pkg/!svn/ver/42502/branches/trunk_cturtle/vision/cmvision/src/main.cpp
+END
+color_gui.h
+K 25
+svn:wc:ra_dav:version-url
+V 85
+/svn/wg-ros-pkg/!svn/ver/42502/branches/trunk_cturtle/vision/cmvision/src/color_gui.h
+END
+capture.h
+K 25
+svn:wc:ra_dav:version-url
+V 83
+/svn/wg-ros-pkg/!svn/ver/42502/branches/trunk_cturtle/vision/cmvision/src/capture.h
+END
+conversions.c
+K 25
+svn:wc:ra_dav:version-url
+V 87
+/svn/wg-ros-pkg/!svn/ver/42502/branches/trunk_cturtle/vision/cmvision/src/conversions.c
+END
+cmvision.cc
+K 25
+svn:wc:ra_dav:version-url
+V 85
+/svn/wg-ros-pkg/!svn/ver/42502/branches/trunk_cturtle/vision/cmvision/src/cmvision.cc
+END
+cmvision_color_blob_finder.cpp
+K 25
+svn:wc:ra_dav:version-url
+V 104
+/svn/wg-ros-pkg/!svn/ver/46385/branches/trunk_cturtle/vision/cmvision/src/cmvision_color_blob_finder.cpp
+END
+cmvision.h
+K 25
+svn:wc:ra_dav:version-url
+V 84
+/svn/wg-ros-pkg/!svn/ver/42502/branches/trunk_cturtle/vision/cmvision/src/cmvision.h
+END
+conversions.h
+K 25
+svn:wc:ra_dav:version-url
+V 87
+/svn/wg-ros-pkg/!svn/ver/42502/branches/trunk_cturtle/vision/cmvision/src/conversions.h
+END

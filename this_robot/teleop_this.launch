@@ -13,7 +13,7 @@
     <param name="axis_linear" value="0" type="int"/>
     <param name="axis_angular" value="1" type="int"/>
     <param name="scale_linear" value="0.5" type="double"/>
-    <param name="scale_angular" value="0.5" type="double"/>
+    <param name="scale_angular" value="0.3" type="double"/>
 
     <node pkg="this_robot" type="this_teleop_joy" name="teleop"/>
 

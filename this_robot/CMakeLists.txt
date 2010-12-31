@@ -28,3 +28,8 @@ set(LIBRARY_OUTPUT_PATH ${PROJECT_SOURCE_DIR}/lib)
 #rosbuild_link_boost(${PROJECT_NAME} thread)
 #rosbuild_add_executable(example examples/example.cpp)
 #target_link_libraries(example ${PROJECT_NAME})
+
+#rosbuild_add_executable(test_pose_publisher src/this_pose_publisher.cpp)
+rosbuild_add_executable(test_this_tf_broadcaster src/this_tf_broadcaster.cpp)
+rosbuild_add_executable(test_this_tf_listener src/tf_listener.cpp)
+rosbuild_add_executable(this_teleop_joy src/this_teleop_joy.cpp)

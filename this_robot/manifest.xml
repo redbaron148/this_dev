@@ -10,6 +10,7 @@
   <url>http://ros.org/wiki/this_robot</url>
   <depend package="roscpp"/>
   <depend package="rospy"/>
+  <depend package="joy"/>
   <depend package="irobot_create_2_1"/>
 
 </package>

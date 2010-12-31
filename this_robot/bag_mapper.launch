@@ -1,0 +1,14 @@
+<launch>
+    <param name="use_sim_time" value="true"/>
+    
+    <arg name="file" default=""/>
+    <node pkg="rosbag" type="play" name="replay" args="--pause $(find this_robot)/$(arg file).bag" output="screen">
+        <remap from="/scan" to="/base_scan"/>
+    </node>
+    
+    <node pkg="gmapping" type="slam_gmapping" name="slam" output="screen">
+        <param name="base_frame" value="base_link"/>
+        <param name="odom_frame" value="odom"/>
+        
+    </node>
+</launch>

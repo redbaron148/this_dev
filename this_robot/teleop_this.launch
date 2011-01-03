@@ -3,7 +3,7 @@
     <node pkg="irobot_create_2_1" type="driver.py" name="controller" output="screen"/>
 
     <!-- joy node -->
-    <node respawn="true" pkg="joy" type="joy" name="turtle_joy" >
+    <node respawn="true" pkg="joy" type="joy" name="this_joy" >
         <param name="dev" type="string" value="/dev/input/js0" />
         <param name="deadzone" value="0.12" />
     </node>

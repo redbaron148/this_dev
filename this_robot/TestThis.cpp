@@ -6,31 +6,32 @@
  */
 
 #include <ros/ros.h>
-#include <irobot_create_2_1/SensorPacket.h>
+#include <geometry_msgs/Twist.h>
 
 using namespace std;
-
-ros::Publisher filtered_blob_pub;
 
 void blobsCallback(cmvision::Blobs msg);
 
 int main(int argc, char **argv)
 {
-    ros::init(argc, argv, "blob_filter");
-    ros::NodeHandle n("blob_filter");
-    
-    getParams(n);
+    ros::init(argc, argv, "this_driver");
+    ros::NodeHandle n("~");
 
-    ros::Subscriber blobs_sub = n.subscribe("/blobs", BLOBS_MSG_BUFFER, &blobsCallback);
-    filtered_blob_pub = n.advertise<cmvision::Blobs>("/blob_filter/blobs", MSG_QUEUE);
+    ros::Publisher cmd_vel_pub = n.advertise<cmvision::Blobs>("/cmd_vel", 1);
 
-    ros::Rate loop_rate(PUBLISH_FREQ);
+    geometry_msgs::Twist cmd_vel;
     
-	while(ros::ok())
-	{
-		ros::spinOnce();
-		loop_rate.sleep();
-	}
+    cmd_vel.linear[0] = 100;
+    cmd_vel.angular[2] = 0;
+    cmd_vel_pub.publish(cmd_vel);
+    
+    sleep(2);
+    
+    cmd_vel.linear[0] = 0;
+    cmd_vel.angular[2] = 0.1;
+    cmd_vel_pub.publish(cmd_vel);
+    
+    sleep(2);
 
 	return 0;
 }

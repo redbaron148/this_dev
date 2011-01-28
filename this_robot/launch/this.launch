@@ -15,9 +15,11 @@
 	
 	<node pkg="rviz" type="rviz" name="rviz" />
 	
-	<node pkg="tf" type="static_transform_publisher" name="base_link_to_laser" args="-0.1651 0 0.03175 3.14159 0 3.14159 base_link laser 15"/>
+	<node pkg="tf" type="static_transform_publisher" name="base_link_to_laser" args="0.1651 0 0.03175 0 0 3.14159 base_link laser 15"/>
 	
 	<node pkg="irobot_create_2_1" type="driver.py" name="create_driver">
 		<param name="port" value="/dev/ttyUSB0" />
 	</node>
+	
+	<!--node pkg="this_robot" type="this_test" name="this_test" output="screen"/-->
 </launch>

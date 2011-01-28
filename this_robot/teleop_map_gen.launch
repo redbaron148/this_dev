@@ -1,0 +1,10 @@
+<launch>
+    <include file="teleop_this.launch"/>
+    
+    <node pkg="tf" type="static_transform_publisher" name="base_link_to_base_laser" args="-0.1651, 0.0, 0.03175 3.14159 0 3.14159 base_link laser 15" />
+    
+    <node pkg="hokuyo_node" type="hokuyo_node" name="hokuyo_node" output="screen">
+        <param name="frame_id" value="/laser"/>
+    </node>
+
+</launch>

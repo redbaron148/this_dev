@@ -1,0 +1,8 @@
+*/bin/
+*/build/
+*/*gen/
+*/msg/lisp/
+*/srv/lisp/
+*/.svn/
+*/*/.svn
+*/*/*/.svn

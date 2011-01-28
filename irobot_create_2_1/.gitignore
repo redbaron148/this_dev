@@ -1,3 +1,4 @@
-!bin/*.py
-!bin/*/*.py
-bin/*/__*
+!bin/
+bin/*.pyc
+bin/*/*.pyc
+src/

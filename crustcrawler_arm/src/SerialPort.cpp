@@ -9,6 +9,8 @@
 #include <unistd.h>
 #include <cstdlib>
 
+using namespace std;
+
 
 /**
  * @class SerialPort
@@ -55,7 +57,7 @@ public:
 	 * @param port : the port to open
 	 * @param baudRate : the baud rate of the port
 	 */
-	SerialPort(char *port, int baudRate);
+	SerialPort(string port, int baudRate);
 	
 	
 	/**
@@ -115,7 +117,7 @@ public:
 	  *
 	  * @param port : the port 
 	  */
-	  void setPort(char *port);
+	  void setPort(string port);
 	  
 	  /**
 	   * Queries the port status; open or closed
@@ -139,7 +141,7 @@ protected:
 	/**
 	 * The name of the serial port
 	 */
-	char *portName;
+	string portName;
 	
 	
 	/**
@@ -165,12 +167,12 @@ protected:
 
 SerialPort::SerialPort()
 {
-	portName = NULL;
+	portName = "";
 	portBaudRate = B0;
 	portIsOpen = false;
 }
 
-SerialPort::SerialPort(char *port, int baudRate)
+SerialPort::SerialPort(string port, int baudRate)
 {
 	portName = port;
 	portBaudRate = baudRate;
@@ -184,9 +186,9 @@ SerialPort::~SerialPort()
 
 bool SerialPort::openPort()
 {	
-	if(!portIsOpen && (portName != NULL) )
+	if(!portIsOpen && (portName != "") )
 	{	
-		fileDescriptor = open(portName, O_RDWR | O_NOCTTY);	
+		fileDescriptor = open(portName.c_str(), O_RDWR | O_NOCTTY);	
 	}
 
 	if(fileDescriptor == -1)
@@ -209,7 +211,7 @@ void SerialPort::closePort()
 	if(portIsOpen) 
 	{
 		close(fileDescriptor);
-		portName = NULL;
+		portName = "";
 		fileDescriptor = -1;
 	}
 }
@@ -242,7 +244,7 @@ void SerialPort::setBaudRate(int baudRate)
 	portBaudRate = baudRate;
 }
 
-void SerialPort::setPort(char *port)
+void SerialPort::setPort(string port)
 {
 	portName = port;
 }

@@ -2,15 +2,15 @@
     <param name="use_sim_time" value="true"/>
     
     <arg name="file" default=""/>
-    <node pkg="rosbag" type="play" name="replay" args=" $(find this_robot)/$(arg file).bag" output="screen">
+    <node pkg="rosbag" type="play" name="replay" args="--pause $(find this_robot)/$(arg file).bag" output="screen">
     </node>
     
     <node pkg="gmapping" type="slam_gmapping" name="slam" output="screen">
-        <param name="scan" value="scan"/>
+        <param name="scan" value="scan_filtered"/>
         
-        <param name="ymin" value="-5"/>
-        <param name="xmin" value="-5"/>
-        <param name="ymax" value="5"/>
-        <param name="xmax" value="5"/>
+        <param name="ymin" value="-7"/>
+        <param name="xmin" value="-7"/>
+        <param name="ymax" value="7"/>
+        <param name="xmax" value="7"/>
     </node>
 </launch>

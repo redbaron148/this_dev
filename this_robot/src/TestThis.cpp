@@ -35,21 +35,6 @@ int main(int argc, char **argv)
     
     ROS_INFO("starting test!");
     
-    for(int i = 0;i < 4;i++)
-    {
-    	cmd_vel.linear.x = 0.1;
-    	cmd_vel.angular.z = 0;
-    	cmd_vel_pub.publish(cmd_vel);
-    
-    	sleep(2);
-    
-    	cmd_vel.linear.x = 0;
-    	cmd_vel.angular.z = 1.57/2.0;
-    	cmd_vel_pub.publish(cmd_vel);
-    
-    	sleep(2);
-    }
-    
     cmd_vel.linear.x = 0;
     cmd_vel.angular.z = 0;
     cmd_vel_pub.publish(cmd_vel);

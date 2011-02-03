@@ -1,0 +1,69 @@
+define block model
+(
+  size [0.5 0.5 0.5]
+  gui_nose 0
+)
+
+define topurg laser
+(
+
+  range_max 4.0
+  fov 219
+  samples 1081
+  # generic model properties
+  color "black"
+  size [ 0.05 0.05 0.1 ]
+)
+
+define this position
+(
+  #size [0.415 0.392 0.25]
+  size [0.3 0.3 0.03]
+  origin [-0.05 0 0 0]
+  gui_nose 1
+  drive "diff"
+  topurg(pose [ 0.1651 0.000 0 0.03175 ])
+)
+
+define floorplan model
+(
+  # sombre, sensible, artistic
+  color "gray30"
+
+  # most maps will need a bounding box
+  boundary 1
+
+  gui_nose 0
+  gui_grid 0
+
+  gui_outline 0
+  gripper_return 0
+  fiducial_return 0
+  laser_return 1
+)
+
+# set the resolution of the underlying raytrace model in meters
+resolution 0.02
+
+interval_sim 100  # simulation timestep in milliseconds
+
+
+window
+( 
+  size [ 745.000 448.000 ] 
+
+  rotate [ 0.000 -1.560 ]
+  scale 28.806 
+)
+
+# load an environment bitmap
+floorplan
+( 
+  name "mrl"
+  bitmap "filtered.pgm"
+  size [32 32 0.0]
+  pose [ 0.00000, 0.00000, 0.000000 ]
+)
+
+# throw in a robot
+this( pose [ -11.277 8.266 0 180.000 ] name "this" color "blue")

@@ -1,0 +1,19 @@
+<package>
+  <description brief="usb_camera_node">
+
+     usb_camera_node
+
+  </description>
+  <author>Nate Roney</author>
+  <license>GPL</license>
+  <review status="unreviewed" notes=""/>
+  <url>http://ros.org/wiki/usb_camera_node</url>
+  <depend package="sensor_msgs"/>
+  <depend package="std_msgs"/>
+  <depend package="opencv2"/>
+  <depend package="cv_bridge"/>
+  <depend package="roscpp"/>
+
+</package>
+
+

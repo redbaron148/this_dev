@@ -11,7 +11,7 @@
 #include <iostream>
 
 #define SERIAL_ON   1
-#define DEBUG_MODE  1
+#define DEBUG_MODE  0
 
 #if(SERIAL_ON)
 SerialPort lsc;
@@ -350,10 +350,12 @@ int main(int argc, char **argv)
   #if(SERIAL_ON)
   lsc.setPort(port);
   lsc.setBaudRate(B115200);
+  ROS_INFO("Attempting to open serial port");
+  //lsc.closePort();
   
   if(!lsc.openPort())
   {
-    ROS_INFO("Unable to open serial port for crustcrawler_server");
+    ROS_INFO("Unable to open serial port for crustcrawler_arm");
     return 1;
   }
   ROS_INFO("Serial port open");

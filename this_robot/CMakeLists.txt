@@ -17,7 +17,7 @@ set(EXECUTABLE_OUTPUT_PATH ${PROJECT_SOURCE_DIR}/bin)
 set(LIBRARY_OUTPUT_PATH ${PROJECT_SOURCE_DIR}/lib)
 
 #uncomment if you have defined messages
-#rosbuild_genmsg()
+rosbuild_genmsg()
 #uncomment if you have defined services
 #rosbuild_gensrv()
 
@@ -30,7 +30,7 @@ set(LIBRARY_OUTPUT_PATH ${PROJECT_SOURCE_DIR}/lib)
 #target_link_libraries(example ${PROJECT_NAME})
 
 rosbuild_add_executable(visualizer src/visualizer.cpp)
-rosbuild_add_executable(this_test src/TestThis.cpp)
+rosbuild_add_executable(this_demo src/ThisDemo.cpp)
 #rosbuild_add_executable(test_this_tf_broadcaster src/this_tf_broadcaster.cpp)
 #rosbuild_add_executable(test_this_tf_listener src/tf_listener.cpp)
 #rosbuild_add_executable(this_teleop_joy src/this_teleop_joy.cpp)

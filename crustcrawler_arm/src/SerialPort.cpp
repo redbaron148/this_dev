@@ -2,7 +2,6 @@
 #define SP_
 
 #include <stdio.h>
-#include <string>
 #include <fcntl.h>
 #include <errno.h>
 #include <termios.h>
@@ -57,7 +56,7 @@ public:
 	 * @param port : the port to open
 	 * @param baudRate : the baud rate of the port
 	 */
-	SerialPort(string port, int baudRate);
+	SerialPort(char* port, int baudRate);
 	
 	
 	/**
@@ -117,7 +116,7 @@ public:
 	  *
 	  * @param port : the port 
 	  */
-	  void setPort(string port);
+	  void setPort(char* port);
 	  
 	  /**
 	   * Queries the port status; open or closed
@@ -141,7 +140,7 @@ protected:
 	/**
 	 * The name of the serial port
 	 */
-	string portName;
+	char* portName;
 	
 	
 	/**
@@ -167,12 +166,12 @@ protected:
 
 SerialPort::SerialPort()
 {
-	portName = "";
+	portName = NULL;
 	portBaudRate = B0;
 	portIsOpen = false;
 }
 
-SerialPort::SerialPort(string port, int baudRate)
+SerialPort::SerialPort(char* port, int baudRate)
 {
 	portName = port;
 	portBaudRate = baudRate;
@@ -186,9 +185,11 @@ SerialPort::~SerialPort()
 
 bool SerialPort::openPort()
 {	
-	if(!portIsOpen && (portName != "") )
+	//std::cout << "opening port" << std::endl << std::endl;
+	if(!portIsOpen && (portName != NULL) )
 	{	
-		fileDescriptor = open(portName.c_str(), O_RDWR | O_NOCTTY);	
+		fileDescriptor = open(portName, O_RDWR | O_NOCTTY | O_NDELAY);	
+		std::cout << "attempting to open port" << std::endl;
 	}
 
 	if(fileDescriptor == -1)
@@ -211,7 +212,7 @@ void SerialPort::closePort()
 	if(portIsOpen) 
 	{
 		close(fileDescriptor);
-		portName = "";
+		portName = NULL;
 		fileDescriptor = -1;
 	}
 }
@@ -244,7 +245,7 @@ void SerialPort::setBaudRate(int baudRate)
 	portBaudRate = baudRate;
 }
 
-void SerialPort::setPort(string port)
+void SerialPort::setPort(char* port)
 {
 	portName = port;
 }

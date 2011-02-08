@@ -30,4 +30,4 @@ rosbuild_gensrv()
 #target_link_libraries(example ${PROJECT_NAME})
 
 rosbuild_add_executable(crustcrawler_arm src/crustcrawler_arm.cpp)
-rosbuild_add_executable(crustcrawler_arm_2 src/crustcrawler_arm_2.cpp)
+#rosbuild_add_executable(crustcrawler_arm_2 src/crustcrawler_arm_2.cpp)

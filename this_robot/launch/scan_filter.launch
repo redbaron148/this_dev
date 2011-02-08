@@ -1,5 +1,6 @@
 <launch>
 	<node pkg="hokuyo_node" type="hokuyo_node" name="hokuyo_node">
+		
 		<param name="min_ang" value="-1.871" />
 		<param name="max_ang" value="1.951" />
 		<param name="cluster" value="1" />

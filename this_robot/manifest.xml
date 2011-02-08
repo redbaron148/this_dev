@@ -15,7 +15,7 @@
   <depend package="cmvision"/>
   <depend package="tf"/>
   <depend package="visualization_msgs"/>
-
+  <depend package="crustcrawler_arm"/>
 </package>
 
 

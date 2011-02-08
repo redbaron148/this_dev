@@ -1,0 +1,18 @@
+<launch>
+
+	<node pkg="usb_camera_node" type="usb_camera_node" name="usb_camera_node" >
+		<param name="fps" value="15"/>
+	</node>
+	<node pkg="cmvision" type="cmvision" name="cmvision" >
+		<param name="color_file" value="$(find this_robot)/include/mrl_day_colors.txt"/>
+		<param name="mean_shift_on" value="false"/>
+		<param name="debug_on" value="true"/>
+		<param name="spatial_radius_pix" value="0"/>
+		<param name="color_radius_pix" value="0"/>
+		<remap from="image" to="image_1"/>
+	</node>
+	<node pkg="this_robot" type="this_demo" name="this_demo" output="screen"/>
+	<node pkg="crustcrawler_arm" type="crustcrawler_arm" name="crustcrawler_arm" output="screen"/>
+	<include file="$(find this_robot)/launch/scan_filter.launch"/>
+	
+</launch>

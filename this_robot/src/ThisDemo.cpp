@@ -46,6 +46,7 @@ int main(int argc, char **argv)
 	while(ros::ok())
 	{
 		sap(REST_POSITION);
+		ssp(CLAW,OPEN);
 		sleep(2);
 		
 		//ROS_INFO("printing to the screen!");
@@ -74,12 +75,14 @@ int main(int argc, char **argv)
 				{
 					ROS_INFO("gotcha! Dist is: %f",lblobs->blobs[i].distance);
 					ROS_INFO("I think it's this one: %f",lblobs->blobs[i].angle);
-					float x = 100*-sin(lblobs->blobs[i].angle*3.14159/180.)*lblobs->blobs[i].distance;
-					float y = 100*cos(lblobs->blobs[i].angle*3.14159/180.)*lblobs->blobs[i].distance;
+					float x = 100*-sin(lblobs->blobs[i].angle*3.14159/180.)*.17;
+					float y = 100*cos(lblobs->blobs[i].angle*3.14159/180.)*.17;
 					ROS_INFO("x: %f",x);
 					ROS_INFO("y: %f",y);
 					
 					set_position(x,y,4,-35);
+					sleep(2);
+					ssp(CLAW,CLOSE);
 					i=lblobs->blob_count;
 				}
 			}

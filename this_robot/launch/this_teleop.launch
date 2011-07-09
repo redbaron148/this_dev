@@ -1,0 +1,25 @@
+<launch>
+
+ <!-- Turtlesim Node-->
+  <node pkg="irobot_create_2_1" type="driver.py" name="create_driver">
+  </node>
+
+<param name="/brown/irobot_create_2_1/port" value="/dev/ttyUSB0" />
+
+ <!-- joy node -->
+  <node respawn="true" pkg="joy" type="joy_node" name="joy_node" >
+    <param name="dev" type="string" value="/dev/input/js0" />
+    <param name="deadzone" value="0.12" />
+  </node>
+
+ <!-- Axes -->
+  <param name="axis_linear" value="0" type="int"/>
+  <param name="axis_angular" value="1" type="int"/>
+  <param name="scale_linear" value=".5" type="double"/>
+  <param name="scale_angular" value=".5" type="double"/>
+
+  <node pkg="this_robot" type="this_teleop_joy" name="teleop" output="screen"/>
+  
+  <node pkg="crustcrawler_arm" type="crustcrawler_arm" name="crustcrawler_arm"/>
+
+</launch>

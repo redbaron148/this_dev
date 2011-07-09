@@ -1,8 +1,8 @@
 <launch>
 	<node pkg="hokuyo_node" type="hokuyo_node" name="hokuyo_node">
 		
-		<param name="min_ang" value="-1.871" />
-		<param name="max_ang" value="1.951" />
+		<param name="min_ang" value="-1.80" />
+		<param name="max_ang" value="1.90" />
 		<param name="cluster" value="1" />
 		<param name="skip" value="0" />
 		<param name="port" value="/dev/ttyACM0" />
@@ -11,7 +11,6 @@
 	</node>
 
 	<node pkg="laser_filters" type="scan_to_scan_filter_chain" output="screen" name="laser_filter">
-		<!--rosparam command="load" file="$(find laser_filters)/examples/shadow_filter_example.yaml" /-->
-    	<rosparam command="load" file="$(find this_robot)/launch/scan_filter_params.yaml" />
+    		<rosparam command="load" file="$(find this_robot)/launch/scan_filter_params.yaml" />
 	</node>
 </launch>

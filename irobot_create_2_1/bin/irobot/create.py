@@ -146,7 +146,7 @@ class Create:
 	def start(self):
 		"""Start the iCreate after initialization or reset."""
 		
-		self.__sendNow(128,128,132,140,1,5,64,16,69,16,74,16,72,40,69,60,141,1)
+		self.__sendNow(128,128,132,140,1,5,64,16,69,16,74,16,72,40,69,60)#,141,1)
 		sleep(1)
 		self.send(139,10,0,255)
 

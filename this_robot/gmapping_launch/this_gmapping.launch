@@ -1,5 +1,5 @@
 <launch>
-	<include file="$(find this_robot)/2dnav_launch/my_robot_configuration.launch"/>
+		<include file="$(find this_robot)/2dnav_launch/my_robot_configuration.launch"/>
 	<node pkg="gmapping" type="slam_gmapping" name="slam" output="screen">
 		<param name="scan" value="scan"/>
 		<param name="base_frame" value="base_link"/>

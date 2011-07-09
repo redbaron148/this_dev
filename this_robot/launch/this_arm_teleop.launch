@@ -20,4 +20,6 @@
 
   <node pkg="this_robot" type="this_teleop_joy" name="teleop" output="screen"/>
   
+  <node pkg="crustcrawler_arm" type="crustcrawler_arm" name="crustcrawler_arm"/>
+
 </launch>

@@ -36,8 +36,8 @@ TeleopThis::TeleopThis(): linear_(1), angular_(2)
 void TeleopThis::joyCallback(const joy::Joy::ConstPtr& joy)
 {
     geometry_msgs::Twist vel;
-    vel.angular.x = (a_scale_*joy->axes[angular_]);
-    vel.linear.z = l_scale_*joy->axes[linear_];
+    vel.angular.z = (a_scale_*joy->axes[angular_]);
+    vel.linear.x = l_scale_*joy->axes[linear_];
 
     vel_pub_.publish(vel);
 }

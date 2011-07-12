@@ -1,0 +1,16 @@
+controller_frequency: 10.0
+clearing_radius: 0.59
+footprint_padding: 0.03
+
+controller_patience: 2.0
+
+recovery_behaviors: [{name: conse}]
+
+NavfnROS:
+  allow_unknown: false
+  
+consevative_clear:
+  reset_distance: 3.0
+  
+aggressive_clear:
+  reset_distance: 1.84   

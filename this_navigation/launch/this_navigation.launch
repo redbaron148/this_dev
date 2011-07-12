@@ -1,0 +1,5 @@
+<launch>
+	<include file="$(find this_navigation)/launch/this_configuration.launch"/>
+	<include file="$(find this_navigation)/launch/move_base.launch"/>
+	<include file="$(find this_navigation)/launch/this_gmapping.launch"/>
+</launch>

@@ -1,12 +1,8 @@
 <launch>
+  
+  <include file="$(find this_robot)/launch/this_driver.launch"/>
 
- <!-- Turtlesim Node-->
-  <node pkg="irobot_create_2_1" type="driver.py" name="create_driver">
-  </node>
-
-<param name="/brown/irobot_create_2_1/port" value="/dev/ttyUSB0" />
-
- <!-- joy node -->
+  <!-- joy node -->
   <node respawn="true" pkg="joy" type="joy_node" name="joy_node" >
     <param name="dev" type="string" value="/dev/input/js0" />
     <param name="deadzone" value="0.12" />

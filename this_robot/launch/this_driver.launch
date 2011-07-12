@@ -1,0 +1,5 @@
+<launch>
+	<node pkg="irobot_create_2_1" type="driver.py" name="create_driver">
+		<param name="port" value="/dev/ttyUSB0" />
+	</node>
+</launch>

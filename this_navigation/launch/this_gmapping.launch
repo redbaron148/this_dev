@@ -9,7 +9,9 @@
         <param name="ymin" value="-7"/>
         <param name="ymax" value="7"/>
         <param name="xmax" value="7"/>
-        <param name="map_udpate_interval" value="5.0"/>
+        
+        <param name="map_udpate_interval" value="1.0"/>
+        
         <param name="maxUrange" value="4.0"/>
         <param name="maxRange" value="4.0"/>
         <param name="sigma" value="0.05"/>

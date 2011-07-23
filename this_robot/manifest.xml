@@ -11,7 +11,7 @@
   <depend package="roscpp"/>
   <depend package="rospy"/>
   <depend package="joy"/>
-  <depend package="irobot_create_2_1"/>
+  <depend package="this_irobot_create_2_1"/>
   <depend package="cmvision"/>
   <depend package="tf"/>
   <depend package="visualization_msgs"/>

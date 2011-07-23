@@ -1,0 +1,22 @@
+<package>
+  <description brief="this_irobot_create_2_1">
+ modified irobot_create_2_1 to drive backwards to work with This robot.
+  </description>
+  <author>Aaron Parker</author>
+  <email>aaparke@siue.edu</email>
+  <license>BSD</license>
+  <review status="unreviewed" notes=""/>
+
+  <rosdep name="python-serial"/>
+  <depend package="roscpp"/>
+  <depend package="rospy"/>
+  <depend package="geometry_msgs"/>
+  <depend package="tf"/>
+  <depend package="nav_msgs"/>
+
+  <export>
+    <cpp cflags="-I${prefix}/msg/cpp"/>
+    <cpp cflags="-I${prefix}/srv/cpp"/>
+  </export>
+
+</package>

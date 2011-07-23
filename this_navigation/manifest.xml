@@ -9,9 +9,6 @@
   <review status="unreviewed" notes=""/>
   <url>http://ros.org/wiki/this_navigation</url>
   <depend package="this_robot"/>
-  <depend package="irobot_create_2_1"/>
-  <depend package="tf"/>
-  <depend package="roscpp"/>
   <depend package="joy"/>
   <depend package="gmapping"/>
   <depend package="move_base"/>

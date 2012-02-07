@@ -22,7 +22,7 @@ bool is_initalizing_all = false;
 int init_count = 0;
 float positions[6] = {0,0,0,0,0,0};
 
-char port[] = "/dev/ttyUSB1";
+char port[] = "/dev/ttyUSB0";
 
 std::string int_to_string(float num)
 {

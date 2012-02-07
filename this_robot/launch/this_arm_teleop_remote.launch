@@ -1,9 +1,9 @@
 <launch>
 
-  <node pkg="this_irobot_create_2_1" type="driver.py" name="create_driver">
-  </node>
+  <!--node pkg="this_irobot_create_2_1" type="driver.py" name="create_driver">
+  </node-->
 
-<param name="/brown/irobot_create_2_1/port" value="/dev/ttyUSB1" />
+<!--param name="/brown/irobot_create_2_1/port" value="/dev/ttyUSB1" /-->
 
  <!-- joy node -->
   <node respawn="true" pkg="joy" type="joy_node" name="joy_node" >
@@ -19,6 +19,10 @@
 
   <node pkg="this_robot" type="this_teleop_joy" name="teleop" output="screen"/>
   
-  <node pkg="crustcrawler_arm" type="crustcrawler_arm" name="crustcrawler_arm"/>
+  <!--node pkg="crustcrawler_arm" type="crustcrawler_arm" name="crustcrawler_arm"/-->
+
+  <node pkg="image_view" type="image_view" name="image_view">
+    <param name="image" value="/image_1"/>
+  </node>
 
 </launch>

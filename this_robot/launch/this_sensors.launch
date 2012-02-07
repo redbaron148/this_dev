@@ -6,10 +6,12 @@
 		<param name="skip" value="0" />
 		<param name="port" value="/dev/ttyACM0" />
 		<param name="calibrate_time" value="true" />
-		<param name="frame_id" value="laser" />
+		<param name="frame_id" value="/laser" />
 	</node>
 
-	<node pkg="laser_filters" type="scan_to_scan_filter_chain" output="screen" name="laser_filter">
+	<!--node pkg="laser_filters" type="scan_to_scan_filter_chain" output="screen" name="laser_filter">
     	<rosparam command="load" file="$(find this_robot)/launch/scan_filter_params.yaml" />
-	</node>
+	</node-->
+	
+	<node pkg="tf" type="static_transform_publisher" name="base_link_to_laser" args="0.1651 0 0.03175 0 0 3.14159 base_link laser 100"/>
 </launch>

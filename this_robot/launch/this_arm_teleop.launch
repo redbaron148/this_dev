@@ -1,10 +1,9 @@
 <launch>
 
- <!-- Turtlesim Node-->
   <node pkg="irobot_create_2_1" type="driver.py" name="create_driver">
   </node>
 
-<param name="/brown/irobot_create_2_1/port" value="/dev/ttyUSB0" />
+<param name="/brown/irobot_create_2_1/port" value="/dev/ttyUSB1" />
 
  <!-- joy node -->
   <node respawn="true" pkg="joy" type="joy_node" name="joy_node" >

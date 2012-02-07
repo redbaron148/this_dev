@@ -66,8 +66,8 @@ float32 angle
     try:
       _x = self
       buff.write(_struct_2i3f.pack(_x.start, _x.end, _x.distance, _x.width, _x.angle))
-    except struct.error, se: self._check_types(se)
-    except TypeError, te: self._check_types(te)
+    except struct.error as se: self._check_types(se)
+    except TypeError as te: self._check_types(te)
 
   def deserialize(self, str):
     """
@@ -82,7 +82,7 @@ float32 angle
       end += 20
       (_x.start, _x.end, _x.distance, _x.width, _x.angle,) = _struct_2i3f.unpack(str[start:end])
       return self
-    except struct.error, e:
+    except struct.error as e:
       raise roslib.message.DeserializationError(e) #most likely buffer underfill
 
 
@@ -97,8 +97,8 @@ float32 angle
     try:
       _x = self
       buff.write(_struct_2i3f.pack(_x.start, _x.end, _x.distance, _x.width, _x.angle))
-    except struct.error, se: self._check_types(se)
-    except TypeError, te: self._check_types(te)
+    except struct.error as se: self._check_types(se)
+    except TypeError as te: self._check_types(te)
 
   def deserialize_numpy(self, str, numpy):
     """
@@ -115,7 +115,7 @@ float32 angle
       end += 20
       (_x.start, _x.end, _x.distance, _x.width, _x.angle,) = _struct_2i3f.unpack(str[start:end])
       return self
-    except struct.error, e:
+    except struct.error as e:
       raise roslib.message.DeserializationError(e) #most likely buffer underfill
 
 _struct_I = roslib.message.struct_I

@@ -1,6 +1,6 @@
 #include <ros/ros.h>
 #include <geometry_msgs/Twist.h>
-#include <joy/Joy.h>
+#include <sensor_msgs/Joy.h>
 #include "ArmLib.h"
 
 
@@ -10,7 +10,7 @@ public:
     TeleopThis();
 
 private:
-    void joyCallback(const joy::Joy::ConstPtr& joy);
+    void joyCallback(const sensor_msgs::Joy::ConstPtr& joy);
 
     ros::NodeHandle nh_;
 
@@ -30,10 +30,10 @@ TeleopThis::TeleopThis(): linear_(1), angular_(2)
 
     vel_pub_ = nh_.advertise<geometry_msgs::Twist>("cmd_vel", 1);
 
-    joy_sub_ = nh_.subscribe<joy::Joy>("joy", 10, &TeleopThis::joyCallback, this);
+    joy_sub_ = nh_.subscribe<sensor_msgs::Joy>("joy", 10, &TeleopThis::joyCallback, this);
 }
 
-void TeleopThis::joyCallback(const joy::Joy::ConstPtr& joy)
+void TeleopThis::joyCallback(const sensor_msgs::Joy::ConstPtr& joy)
 {
     geometry_msgs::Twist vel;
     vel.angular.z = (a_scale_*joy->axes[angular_]);

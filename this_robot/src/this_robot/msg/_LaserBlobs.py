@@ -3,7 +3,7 @@ import roslib.message
 import struct
 
 import this_robot.msg
-import roslib.msg
+import std_msgs.msg
 
 class LaserBlobs(roslib.message.Message):
   _md5sum = "7a472916c2c09f109a03f0585dacd394"
@@ -27,7 +27,7 @@ int16 blob_count
 this_robot/LaserBlob[] blobs
 
 ================================================================================
-MSG: roslib/Header
+MSG: std_msgs/Header
 # Standard metadata for higher-level stamped data types.
 # This is generally used to communicate timestamped data 
 # in a particular coordinate frame.
@@ -74,7 +74,7 @@ float32 angle
       super(LaserBlobs, self).__init__(*args, **kwds)
       #message fields cannot be None, assign default values for those that are
       if self.header is None:
-        self.header = roslib.msg._Header.Header()
+        self.header = std_msgs.msg._Header.Header()
       if self.angle_min is None:
         self.angle_min = 0.
       if self.angle_max is None:
@@ -94,7 +94,7 @@ float32 angle
       if self.blobs is None:
         self.blobs = []
     else:
-      self.header = roslib.msg._Header.Header()
+      self.header = std_msgs.msg._Header.Header()
       self.angle_min = 0.
       self.angle_max = 0.
       self.angle_increment = 0.
@@ -130,8 +130,8 @@ float32 angle
       for val1 in self.blobs:
         _x = val1
         buff.write(_struct_2i3f.pack(_x.start, _x.end, _x.distance, _x.width, _x.angle))
-    except struct.error, se: self._check_types(se)
-    except TypeError, te: self._check_types(te)
+    except struct.error as se: self._check_types(se)
+    except TypeError as te: self._check_types(te)
 
   def deserialize(self, str):
     """
@@ -141,7 +141,7 @@ float32 angle
     """
     try:
       if self.header is None:
-        self.header = roslib.msg._Header.Header()
+        self.header = std_msgs.msg._Header.Header()
       end = 0
       _x = self
       start = end
@@ -161,7 +161,7 @@ float32 angle
       end += 4
       (length,) = _struct_I.unpack(str[start:end])
       self.blobs = []
-      for i in xrange(0, length):
+      for i in range(0, length):
         val1 = this_robot.msg.LaserBlob()
         _x = val1
         start = end
@@ -169,7 +169,7 @@ float32 angle
         (_x.start, _x.end, _x.distance, _x.width, _x.angle,) = _struct_2i3f.unpack(str[start:end])
         self.blobs.append(val1)
       return self
-    except struct.error, e:
+    except struct.error as e:
       raise roslib.message.DeserializationError(e) #most likely buffer underfill
 
 
@@ -194,8 +194,8 @@ float32 angle
       for val1 in self.blobs:
         _x = val1
         buff.write(_struct_2i3f.pack(_x.start, _x.end, _x.distance, _x.width, _x.angle))
-    except struct.error, se: self._check_types(se)
-    except TypeError, te: self._check_types(te)
+    except struct.error as se: self._check_types(se)
+    except TypeError as te: self._check_types(te)
 
   def deserialize_numpy(self, str, numpy):
     """
@@ -207,7 +207,7 @@ float32 angle
     """
     try:
       if self.header is None:
-        self.header = roslib.msg._Header.Header()
+        self.header = std_msgs.msg._Header.Header()
       end = 0
       _x = self
       start = end
@@ -227,7 +227,7 @@ float32 angle
       end += 4
       (length,) = _struct_I.unpack(str[start:end])
       self.blobs = []
-      for i in xrange(0, length):
+      for i in range(0, length):
         val1 = this_robot.msg.LaserBlob()
         _x = val1
         start = end
@@ -235,7 +235,7 @@ float32 angle
         (_x.start, _x.end, _x.distance, _x.width, _x.angle,) = _struct_2i3f.unpack(str[start:end])
         self.blobs.append(val1)
       return self
-    except struct.error, e:
+    except struct.error as e:
       raise roslib.message.DeserializationError(e) #most likely buffer underfill
 
 _struct_I = roslib.message.struct_I
